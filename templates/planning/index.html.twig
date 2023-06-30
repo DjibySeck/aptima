@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planning index{% endblock %}
+
+{% block body %}
+    <h1>Planning index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>P. Id</th>
+                <th>P. Date</th>
+                <th>P. am debut</th>
+                <th>P. am fin</th>
+                <th>P. pm debut</th>
+                <th>P. pm fin</th>
+
+                <th>Centre</th>
+                <th>Agent</th>
+
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for planning in plannings %}
+            <tr>
+                <td>{{ planning.id }}</td>
+                <td>{{ planning.datePlanning ? planning.datePlanning|date('Y-m-d') : '' }}</td>
+                <td>{{ planning.planHeureAmDebut ? planning.planHeureAmDebut|date('H:i:s') : '' }}</td>
+                <td>{{ planning.planHeureAmFin ? planning.planHeureAmFin|date('H:i:s') : '' }}</td>
+                <td>{{ planning.planHeurePmDebut ? planning.planHeurePmDebut|date('H:i:s') : '' }}</td>
+                <td>{{ planning.planHeurePmFin ? planning.planHeurePmFin|date('H:i:s') : '' }}</td>
+
+                <td>{{ planning.centre ? planning.centre : '' }}</td>
+                <td>{{ planning.user ? planning.user : '' }}</td>
+                <td>
+                    <a href="{{ path('app_planning_show', {'id': planning.id}) }}">show</a>
+                    <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_planning_new') }}">Create new</a>
+{% endblock %}

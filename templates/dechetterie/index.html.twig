@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dechetterie index{% endblock %}
+
+{% block body %}
+    <h1>Dechetterie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code_postal</th>
+                <th>Nom</th>
+                <th>Groupe</th>
+                <th>to delete</th>
+                <th>tel</th>
+                <th>Am1</th>
+                <th>Am2</th>
+                <th>Pm1</th>
+                <th>Pm2</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dechetterie in dechetteries %}
+            <tr>
+                <td>{{ dechetterie.id }}</td>
+                <td>{{ dechetterie.adresse }}</td>
+                <td>{{ dechetterie.ville }}</td>
+                <td>{{ dechetterie.codePostal }}</td>
+                <td>{{ dechetterie.nomCentre }}</td>
+                <td>{{ dechetterie.groupe }}</td>
+                <td>{{ dechetterie.dechNom }}</td>
+                <td>{{ dechetterie.dechTel }}</td>
+                <td>{{ dechetterie.dechHeureAmDebut ? dechetterie.dechHeureAmDebut|date('H:i:s') : '' }}</td>
+                <td>{{ dechetterie.dechHeureAmFin ? dechetterie.dechHeureAmFin|date('H:i:s') : '' }}</td>
+                <td>{{ dechetterie.dechHeurePmDebut ? dechetterie.dechHeurePmDebut|date('H:i:s') : '' }}</td>
+                <td>{{ dechetterie.dechHeurePmFin ? dechetterie.dechHeurePmFin|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_dechetterie_show', {'id': dechetterie.id}) }}">show</a>
+                    <a href="{{ path('app_dechetterie_edit', {'id': dechetterie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_dechetterie_new') }}">Create new</a>
+{% endblock %}

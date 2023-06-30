@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dechetterie{% endblock %}
+
+{% block body %}
+    <h1>Dechetterie</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ dechetterie.id }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ dechetterie.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ dechetterie.ville }}</td>
+            </tr>
+            <tr>
+                <th>Code_postal</th>
+                <td>{{ dechetterie.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Nom_centre</th>
+                <td>{{ dechetterie.nomCentre }}</td>
+            </tr>
+            <tr>
+                <th>Groupe</th>
+                <td>{{ dechetterie.groupe }}</td>
+            </tr>
+            <tr>
+                <th>Dech_nom</th>
+                <td>{{ dechetterie.dechNom }}</td>
+            </tr>
+            <tr>
+                <th>Dech_tel</th>
+                <td>{{ dechetterie.dechTel }}</td>
+            </tr>
+            <tr>
+                <th>Dech_heure_am_debut</th>
+                <td>{{ dechetterie.dechHeureAmDebut ? dechetterie.dechHeureAmDebut|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dech_heure_am_fin</th>
+                <td>{{ dechetterie.dechHeureAmFin ? dechetterie.dechHeureAmFin|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dech_heure_pm_debut</th>
+                <td>{{ dechetterie.dechHeurePmDebut ? dechetterie.dechHeurePmDebut|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Dech_heure_pm_fin</th>
+                <td>{{ dechetterie.dechHeurePmFin ? dechetterie.dechHeurePmFin|date('H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_dechetterie_index') }}">back to list</a>
+
+    <a href="{{ path('app_dechetterie_edit', {'id': dechetterie.id}) }}">edit</a>
+
+    {{ include('dechetterie/_delete_form.html.twig') }}
+{% endblock %}

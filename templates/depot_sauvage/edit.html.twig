@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit DepotSauvage{% endblock %}
+
+{% block body %}
+    <h1>Edit DepotSauvage</h1>
+
+    {{ include('depot_sauvage/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_depot_sauvage_index') }}">back to list</a>
+
+    {{ include('depot_sauvage/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CentreTri index{% endblock %}
+
+{% block body %}
+    <h1>CentreTri index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code_postal</th>
+                <th>Nom_centre</th>
+                <th>Groupe</th>
+                <th>Tri_lieu</th>
+                <th>Tri_heure_am_debut</th>
+                <th>Tri_heure_am_fin</th>
+                <th>Tri_heure_pm_debut</th>
+                <th>Tri_heure_pm_fin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for centre_tri in centre_tris %}
+            <tr>
+                <td>{{ centre_tri.id }}</td>
+                <td>{{ centre_tri.adresse }}</td>
+                <td>{{ centre_tri.ville }}</td>
+                <td>{{ centre_tri.codePostal }}</td>
+                <td>{{ centre_tri.nomCentre }}</td>
+                <td>{{ centre_tri.groupe }}</td>
+                <td>{{ centre_tri.triLieu }}</td>
+                <td>{{ centre_tri.triHeureAmDebut }}</td>
+                <td>{{ centre_tri.triHeureAmFin }}</td>
+                <td>{{ centre_tri.triHeurePmDebut }}</td>
+                <td>{{ centre_tri.triHeurePmFin }}</td>
+                <td>
+                    <a href="{{ path('app_centre_tri_show', {'id': centre_tri.id}) }}">show</a>
+                    <a href="{{ path('app_centre_tri_edit', {'id': centre_tri.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_centre_tri_new') }}">Create new</a>
+{% endblock %}

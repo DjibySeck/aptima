@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New DepotSauvage{% endblock %}
+
+{% block body %}
+    <h1>Create new DepotSauvage</h1>
+
+    {{ include('depot_sauvage/_form.html.twig') }}
+
+    <a href="{{ path('app_depot_sauvage_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New CentreTri{% endblock %}
+
+{% block body %}
+    <h1>Create new CentreTri</h1>
+
+    {{ include('centre_tri/_form.html.twig') }}
+
+    <a href="{{ path('app_centre_tri_index') }}">back to list</a>
+{% endblock %}

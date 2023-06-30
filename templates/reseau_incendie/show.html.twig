@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ReseauIncendie{% endblock %}
+
+{% block body %}
+    <h1>ReseauIncendie</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reseau_incendie.id }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ reseau_incendie.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ reseau_incendie.ville }}</td>
+            </tr>
+            <tr>
+                <th>Code_postal</th>
+                <td>{{ reseau_incendie.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Nom_centre</th>
+                <td>{{ reseau_incendie.nomCentre }}</td>
+            </tr>
+            <tr>
+                <th>Groupe</th>
+                <td>{{ reseau_incendie.groupe }}</td>
+            </tr>
+            <tr>
+                <th>Incendie_num_borne</th>
+                <td>{{ reseau_incendie.incendieNumBorne }}</td>
+            </tr>
+            <tr>
+                <th>Incendie_latitude</th>
+                <td>{{ reseau_incendie.incendieLatitude }}</td>
+            </tr>
+            <tr>
+                <th>Incendie_longitude</th>
+                <td>{{ reseau_incendie.incendieLongitude }}</td>
+            </tr>
+            <tr>
+                <th>Incendie_description</th>
+                <td>{{ reseau_incendie.incendieDescription }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_reseau_incendie_index') }}">back to list</a>
+
+    <a href="{{ path('app_reseau_incendie_edit', {'id': reseau_incendie.id}) }}">edit</a>
+
+    {{ include('reseau_incendie/_delete_form.html.twig') }}
+{% endblock %}

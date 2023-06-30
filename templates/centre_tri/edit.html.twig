@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CentreTri{% endblock %}
+
+{% block body %}
+    <h1>Edit CentreTri</h1>
+
+    {{ include('centre_tri/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_centre_tri_index') }}">back to list</a>
+
+    {{ include('centre_tri/_delete_form.html.twig') }}
+{% endblock %}

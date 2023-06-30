@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ReseauIncendie index{% endblock %}
+
+{% block body %}
+    <h1>ReseauIncendie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code_postal</th>
+                <th>Nom_centre</th>
+                <th>Groupe</th>
+                <th>Incendie_num_borne</th>
+                <th>Incendie_latitude</th>
+                <th>Incendie_longitude</th>
+                <th>Incendie_description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reseau_incendie in reseau_incendies %}
+            <tr>
+                <td>{{ reseau_incendie.id }}</td>
+                <td>{{ reseau_incendie.adresse }}</td>
+                <td>{{ reseau_incendie.ville }}</td>
+                <td>{{ reseau_incendie.codePostal }}</td>
+                <td>{{ reseau_incendie.nomCentre }}</td>
+                <td>{{ reseau_incendie.groupe }}</td>
+                <td>{{ reseau_incendie.incendieNumBorne }}</td>
+                <td>{{ reseau_incendie.incendieLatitude }}</td>
+                <td>{{ reseau_incendie.incendieLongitude }}</td>
+                <td>{{ reseau_incendie.incendieDescription }}</td>
+                <td>
+                    <a href="{{ path('app_reseau_incendie_show', {'id': reseau_incendie.id}) }}">show</a>
+                    <a href="{{ path('app_reseau_incendie_edit', {'id': reseau_incendie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_reseau_incendie_new') }}">Create new</a>
+{% endblock %}

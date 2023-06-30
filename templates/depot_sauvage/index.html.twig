@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DepotSauvage index{% endblock %}
+
+{% block body %}
+    <h1>DepotSauvage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code_postal</th>
+                <th>Nom_centre</th>
+                <th>Groupe</th>
+                <th>Depot_description</th>
+                <th>Depot_latitude</th>
+                <th>Depot_longitude</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for depot_sauvage in depot_sauvages %}
+            <tr>
+                <td>{{ depot_sauvage.id }}</td>
+                <td>{{ depot_sauvage.adresse }}</td>
+                <td>{{ depot_sauvage.ville }}</td>
+                <td>{{ depot_sauvage.codePostal }}</td>
+                <td>{{ depot_sauvage.nomCentre }}</td>
+                <td>{{ depot_sauvage.groupe }}</td>
+                <td>{{ depot_sauvage.depotDescription }}</td>
+                <td>{{ depot_sauvage.depotLatitude }}</td>
+                <td>{{ depot_sauvage.depotLongitude }}</td>
+                <td>
+                    <a href="{{ path('app_depot_sauvage_show', {'id': depot_sauvage.id}) }}">show</a>
+                    <a href="{{ path('app_depot_sauvage_edit', {'id': depot_sauvage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_depot_sauvage_new') }}">Create new</a>
+{% endblock %}
