@@ -68,4 +68,9 @@ class DepotSauvage extends Centre
 
         return $this;
     }
+    public function __toString()
+    {
+
+        return $this->depot_description;
+    }
 }

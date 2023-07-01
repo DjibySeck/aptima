@@ -98,4 +98,9 @@ class CentreTri extends Centre
 
         return $this;
     }
+    public function __toString()
+    {
+
+        return $this->tri_lieu;
+    }
 }

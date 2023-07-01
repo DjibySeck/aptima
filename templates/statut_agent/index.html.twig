@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}StatutAgent index{% endblock %}
+
+{% block body %}
+    <h1>StatutAgent index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Agent</th>
+                <th>Date_debut</th>
+                <th>Date_fin</th>
+                <th>Statut</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for statut_agent in statut_agents %}
+            <tr>
+                <td>{{ statut_agent.id }}</td>
+                <td>{{ statut_agent.user }}</td>
+                <td>{{ statut_agent.dateDebut ? statut_agent.dateDebut|date('Y-m-d') : '' }}</td>
+                <td>{{ statut_agent.dateFin ? statut_agent.dateFin|date('Y-m-d') : '' }}</td>
+                <td>{{ statut_agent.statut }}</td>
+
+                <td>
+                    <a href="{{ path('app_statut_agent_show', {'id': statut_agent.id}) }}">show</a>
+                    <a href="{{ path('app_statut_agent_edit', {'id': statut_agent.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_statut_agent_new') }}">Create new</a>
+{% endblock %}

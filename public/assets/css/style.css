@@ -1,0 +1,391 @@
+/*navbar bootstrap*/
+.navbg{
+    /*background-color: #1E3050 !important;*/
+    background-color: #000 !important;
+    padding: 15px;
+    padding: 15px 75px 15px 15px !important;
+}
+.navbar-brand, .nav-link.active, .nav-link{
+    color: #fff !important;
+}
+
+/*css liste déroulante*/
+
+ul { list-style-type: none; }
+
+a {
+color: #b63b4d;
+text-decoration: none;
+}
+
+/** =======================
+* Contenedor Principal
+===========================*/
+
+
+#loginform h1 {
+color: #FFF;
+font-size: 24px;
+font-weight: 400;
+text-align: center;
+}
+
+#loginform h1 a {
+color: #c12c42;
+font-size: 16px;
+}
+
+.accordeon_accueil {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.accordeon_accueil .link {
+cursor: pointer;
+display: block;
+padding: 7px 15px 7px 42px;
+color: #4D4D4D;
+font-size: 14px;
+font-weight: 700;
+border-bottom: 1px solid #fff;
+position: relative;
+-webkit-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+transition: all 0.4s ease;
+background-color: #DEE2E6;
+}
+
+.accordeon_accueil li:last-child .link { border-bottom: 0; }
+
+.accordeon_accueil li i {
+position: absolute;
+top: px;
+left: 12px;
+font-size: 18px;
+color: #595959;
+-webkit-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+.accordeon_accueil li i.fa-chevron-down {
+right: 12px;
+left: auto;
+font-size: 16px;
+}
+
+.accordeon_accueil li.open .link { color: #b63b4d; }
+
+.accordeon_accueil li.open i { color: #b63b4d; }
+
+.accordeon_accueil li.open i.fa-chevron-down {
+-webkit-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+/**
+* Submenu
+-----------------------------*/
+
+
+.submenu {
+display: none;
+background: #D1E7DD;
+font-size: 14px;
+}
+
+.submenu li { border-bottom: 1px solid #fff; }
+
+.submenu a {
+display: block;
+text-decoration: none;
+color: #1E3050;
+padding: 7px;
+padding-left: 42px;
+-webkit-transition: all 0.25s ease;
+-o-transition: all 0.25s ease;
+transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+background: #CFF4FC;
+color: #000;
+}
+
+/************sign form*************/
+#box{
+    height: auto;
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    margin: 50px auto;
+}
+
+#loginform,#signupform{
+    width: 310px;
+    margin: auto;
+    padding: 75px 0;
+}
+#loginform h1,#signupform h1{
+    font-family: arial;
+    font-size: 25px;
+    color:turquoise;
+}
+#loginform input,#signupform input{
+    height: 40px;
+    width: 300px;
+    border: 0px;
+    outline: none;
+    border-bottom: 1px solid gray;
+    margin: 5px;
+}
+#loginform button,#signupform button{
+    height: 35px;
+    width: 130px;
+    background-color:turquoise;
+    font-family: arial;
+    font-size: 16px;
+    color:white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 175px;
+}
+#loginform #logoutbutton,#signupform #logoutbutton{
+    height: 35px;
+    width: 130px;
+    background-color:ORANGERED;
+    font-family: arial;
+    font-size: 16px;
+    color:white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+#login_btn:hover,#signup_btn:hover{
+    background-color: lawngreen;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*enlever le label du formulaire inscription*/
+.hideMyLabel label{
+    display: none;
+}
+/*mettre le input avant ; j'accèpte les conditions*/
+.putInputFirst div{
+    display: flex;
+    flex-direction: row-reverse;   
+    width: 168px;
+    font-size: 14px
+}
+input#registration_form_rgpd{
+    width: 10px;
+    height: 15px;   
+}
+
+.hideMyLabel div ul{
+    padding-left: 0;
+    color: orangered;    
+}
+
+
+/**admin vertical menu agent planning*/   
+.ui-tabs.ui-tabs-vertical {
+    padding: 0;
+}
+.ui-tabs.ui-tabs-vertical .ui-widget-header {
+    border: none;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav {
+    float: left;
+    width: 15em;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid gray;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li {
+    background: #2B3044;
+    clear: left;
+    width: 100%;
+    margin: 0.2em 0;
+    border: 1px solid gray;
+    border-width: 1px 0 1px 1px;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+    position: relative;
+    right: -2px;
+    z-index: 2;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+    width: 100%;
+    padding: 0.6em 1em;
+    color: #fff;
+    text-decoration: none;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li a:hover {
+    cursor: pointer;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: 0.2em;
+    padding-bottom: 0;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li:last-child {
+    margin-bottom: 10px;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-panel {
+    float: left;
+    width: 28em;
+    border-left: 1px solid gray;
+    border-radius: 0;
+    position: relative;
+    left: 7px;
+}
+
+
+
+/**admin css tableau agent planning**/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+  /*background-color: #3e94ec;*/
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  padding:5px;
+  width: 1680px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  width: 210px;
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  width: 210px;
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+
+/*formulaire ajout agent*/
+form div#user {
+  width: 45%;
+  margin: auto;
+}
+
+form div#user div input{
+  margin-bottom: 20px;
+}

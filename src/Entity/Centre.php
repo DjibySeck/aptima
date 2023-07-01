@@ -26,10 +26,10 @@ class Centre
     protected ?int $code_postal = null;
 
     #[ORM\Column(length: 80)]
-    private ?string $nom_centre = null;
+    protected ?string $nom_centre = null;
 
     #[ORM\Column(length: 90)]
-    private ?string $groupe = null;
+    protected ?string $groupe = null;
 
     /*
     Erreur:
@@ -100,5 +100,10 @@ class Centre
         $this->groupe = $groupe;
 
         return $this;
+    }
+    public function __toString()
+    {
+
+        return $this->ville;
     }
 }

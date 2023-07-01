@@ -18,6 +18,8 @@
                 <th>Centre</th>
                 <th>Agent</th>
 
+
+
                 <th>actions</th>
             </tr>
         </thead>
@@ -31,8 +33,11 @@
                 <td>{{ planning.planHeurePmDebut ? planning.planHeurePmDebut|date('H:i:s') : '' }}</td>
                 <td>{{ planning.planHeurePmFin ? planning.planHeurePmFin|date('H:i:s') : '' }}</td>
 
-                <td>{{ planning.centre ? planning.centre : '' }}</td>
-                <td>{{ planning.user ? planning.user : '' }}</td>
+                <td>{{ planning.centre }}</td>
+                <td>{{ planning.user }}</td>
+
+
+
                 <td>
                     <a href="{{ path('app_planning_show', {'id': planning.id}) }}">show</a>
                     <a href="{{ path('app_planning_edit', {'id': planning.id}) }}">edit</a>

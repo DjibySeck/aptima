@@ -2,50 +2,39 @@
 
 namespace App\Form;
 
-use App\Entity\Planning;
-use App\Entity\Centre;
+use App\Entity\StatutAgent;
 use App\Entity\User;
 use App\Entity\Statut;
-use App\Entity\StatutAgent;
-
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-class PlanningType extends AbstractType
+class StatutAgentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date_planning')
-            ->add('plan_heure_am_debut')
-            ->add('plan_heure_am_fin')
-            ->add('plan_heure_pm_debut')
-            ->add('plan_heure_pm_fin')
-            ->add('centre', EntityType::class, [
-                'class' => Centre::class,       
-                'choice_label' => 'nom_centre'
+            ->add('date_debut', DateTimeType::class)
+            ->add('date_fin', DateTimeType::class)
+            ->add('statut', EntityType::class, [
+                'class' => Statut::class,       
+                'choice_label' => 'etat'
             ])
             ->add('user', EntityType::class, [
                 'class' => User::class,       
                 'choice_label' => 'prenom'
             ])
-            /*
-            ->add('statut', EntityType::class, [
-                'class' => Statut::class,       
-                'choice_label' => 'etat'
-            ])
-            */
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Planning::class,
+            'data_class' => StatutAgent::class,
         ]);
     }
 }

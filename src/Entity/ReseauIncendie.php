@@ -83,4 +83,9 @@ class ReseauIncendie extends Centre
 
         return $this;
     }
+    public function __toString()
+    {
+
+        return $this->incendie_description;
+    }
 }

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StatutAgent{% endblock %}
+
+{% block body %}
+    <h1>Create new StatutAgent</h1>
+
+    {{ include('statut_agent/_form.html.twig') }}
+
+    <a href="{{ path('app_statut_agent_index') }}">back to list</a>
+{% endblock %}
