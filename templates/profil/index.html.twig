@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProfilController!{% endblock %}
+{% block title %}Page profil{% endblock %}
 
 {% block body %}
 
@@ -23,5 +23,85 @@
     Formulaire pour contacter l'administrateur
 
 </div>
-
+<div id="d" style="margin-bottom: 50px">
+    <div>nom et prenom du calendrier de l'agent qui s'affiche</div>
+    <div>date du jour</div>
+    <div>télécharger le calendrier de l'agent</div>
+    <div>imprimer le calendrier de l'agent</div>
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th style="background-color: #3e94ec;"></th>
+                <th style="background-color: #3e94ec;">Heure</th>
+                <th class="text-left">lundi 07/06/2023</th>
+                <th class="text-left">mardi</th>
+                <th class="text-left">mercredi</th>
+                <th class="text-left">jeudi</th>
+                <th class="text-left">vendredi</th>
+                <th class="text-left">samedi</th>
+                <th class="text-left">dimanche</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            <tr>
+                <td rowspan="2" class="text-left">Matin</td>
+                <td class="text-left">am1</td>
+                <td class="text-left">prenom2</td>
+                <td class="text-left">prenom3</td>
+                <td class="text-left">prenom4</td>
+                <td class="text-left">prenom5</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+                <td class="text-left">prenom7</td>
+            </tr>
+            <tr>
+                <td class="text-left">am2</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+                <td class="text-left">prenom3</td>
+                <td class="text-left">prenom4</td>
+                <td class="text-left">prenom5</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="text-left">Apeès-midi</td>
+                <td class="text-left">pm1</td>
+                <td class="text-left">prenom2</td>
+                <td class="text-left">prenom3</td>
+                <td class="text-left">prenom4</td>
+                <td class="text-left">prenom5</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+                <td class="text-left">prenom7</td>
+            </tr>
+            <tr>
+                <td class="text-left">pm2</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+                <td class="text-left">prenom3</td>
+                <td class="text-left">prenom4</td>
+                <td class="text-left">prenom5</td>
+                <td class="text-left">prenom6</td>
+                <td class="text-left">prenom7</td>
+            </tr>
+    
+        </tbody>
+    </table>
+    <table class="table-fill" style="height: auto; margin-top: 10px;">
+        <thead>
+            <tr>
+                <td style="background-color: #3e94ec;"></td>
+                <td style="background-color: #3e94ec;"></td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+                <td class="text-left" style=" background-color: gray; color: #fff;">heures totales</td>
+            </tr>
+        </thead>
+    </table>        
+</div>
 {% endblock %}

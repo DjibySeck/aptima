@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\User;
 use App\Entity\StatutAgent;
+use App\Entity\Planning;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,25 +24,7 @@ class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        /*
         $builder
-            ->add('email')
-           // ->add('roles')
-            ->add('password')
-            ->add('nom')
-            ->add('prenom')
-            ->add('telephone')
-            
-            ->add('statut_agent',EntityType::class, [
-                'mapped' => false,
-                'class'=>StatutAgent::class,
-                'choice_label'=>"date_debut",
-                'placeholder' => 'statut agent',
-                'label' => 'Agent'
-
-            ])
-            */
-            $builder
             ->add('nom', TextType::class, [
                 'attr' => [
                     'class' => 'form-control'
