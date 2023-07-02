@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Planning;
 use App\Form\PlanningType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/planning')]
+#[Route('/admin/planning')]
 class PlanningController extends AbstractController
 {
     #[Route('/', name: 'app_planning_index', methods: ['GET'])]

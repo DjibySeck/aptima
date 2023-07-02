@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\StatutAgent;
 use App\Form\StatutAgentType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/statut/agent')]
+#[Route('/admin/statut/agent')]
 class StatutAgentController extends AbstractController
 {
     #[Route('/', name: 'app_statut_agent_index', methods: ['GET'])]

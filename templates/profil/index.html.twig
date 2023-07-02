@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+
+    <div class="mb-3">
+        <h5 style="text-align: center">
+            <em>Vous êtes connecté en tant que : </em> 
+                <span style="color: blue">{{ app.user.userIdentifier }}</span>
+        </h5>
+            Rôle : {{ app.user.roles[0] }} <br>
+            Nom : {{ app.user.nom }} <br>
+            Prénom : {{ app.user.prenom }} <br>
+            Email : {{ app.user.email }} <br>
+            Téléphone : {{ app.user.telephone }} <br>
+            Mot de passe : {{ app.user.password }}
+    </div>
+
+    Formulaire pour contacter l'administrateur
+
+</div>
+
+{% endblock %}

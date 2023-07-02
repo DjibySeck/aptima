@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\DepotSauvage;
 use App\Form\DepotSauvageType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/depot/sauvage')]
+#[Route('/admin/depot/sauvage')]
 class DepotSauvageController extends AbstractController
 {
     #[Route('/', name: 'app_depot_sauvage_index', methods: ['GET'])]

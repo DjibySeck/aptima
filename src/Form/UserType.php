@@ -10,6 +10,10 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+
 
 use Doctrine\ORM\EntityRepository;
 
@@ -19,6 +23,7 @@ class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        /*
         $builder
             ->add('email')
            // ->add('roles')
@@ -26,7 +31,7 @@ class UserType extends AbstractType
             ->add('nom')
             ->add('prenom')
             ->add('telephone')
-            /*
+            
             ->add('statut_agent',EntityType::class, [
                 'mapped' => false,
                 'class'=>StatutAgent::class,
@@ -36,6 +41,34 @@ class UserType extends AbstractType
 
             ])
             */
+            $builder
+            ->add('nom', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('prenom', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('telephone', IntegerType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('email', EmailType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            //->add('roles')
+            ->add('password', TextType::class, [
+                'attr' => [
+                    'label' => 'Mot de passe',
+                    'class' => 'form-control'
+                ]
+            ])
         ;
     }
 

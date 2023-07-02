@@ -1,48 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Gestion des agents{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+    <h1>Gestion des agents</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Email</th>
-                <!--<th>Roles</th>-->
-                <th>Password</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Telephone</th>
+                {# <th>Id</th> #}
 
-                <th>actions</th>
+                <th style=" width: 30%; background-color: #1E3050">Email</th>
+
+                {# <th>Roles</th> #}
+                {# <th>Password</th> #}
+
+                <th style=" width: 30%; background-color: #1E3050">Nom</th>
+                <th style=" width: 30%; background-color: #1E3050">Prenom</th>
+                <th style=" width: 30%; background-color: #1E3050">Telephone</th>
+
+                <th style=" width: 10%; background-color: #1E3050" colspan="2">actions</th>
             </tr>
         </thead>
         <tbody>
         {% for user in users %}
             <tr>
-                <td>{{ user.id }}</td>
+                {# <td>{{ user.id }}</td> #}
                 <td>{{ user.email }}</td>
-                <!--<td>{{ user.roles ? user.roles|json_encode : '' }}</td>-->
-                <td>{{ user.password }}</td>
+                {# <td>{{ user.roles ? user.roles|json_encode : '' }}</td> #}
+                {# <td>{{ user.password }}</td> #}
                 <td>{{ user.nom }}</td>
                 <td>{{ user.prenom }}</td>
                 <td>{{ user.telephone }}</td>
 
-
-                <td>
-                    <a href="{{ path('app_user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
-                </td>
+                <td><a href="{{ path('app_user_show', {'id': user.id}) }}"><i style="color: #1E3050" class="fa-solid fa-user-check"></i></a> {# show #}</td>
+                <td><a href="{{ path('app_user_edit', {'id': user.id}) }}"><i style="color: #1E3050" class="fa-solid fa-user-pen"></i></a> {# edit #}</td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Aucun enregistrement trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_user_new') }}">Create new</a>
+    <a class="btn btn-primary" style="float: right;" <a href="{{ path('app_user_new') }}">Ajouter un agent</a> {# Create new #}<br>
+    <a class="btn btn-secondary" style="float: left;" <a href="{{ path('app_admin_accueil') }}">Retour à l'accueil administrateur</a>
+
 {% endblock %}

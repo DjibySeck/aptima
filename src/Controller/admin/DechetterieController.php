@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Dechetterie;
 use App\Form\DechetterieType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/dechetterie')]
+#[Route('/admin/dechetterie')]
 class DechetterieController extends AbstractController
 {
     #[Route('/', name: 'app_dechetterie_index', methods: ['GET'])]

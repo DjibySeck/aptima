@@ -24,7 +24,7 @@
             </div>
             <div style="width:60px; height: 60px; padding-top: 15px; margin: 10px 0"><!--employés-->
                 <div style="width: 27px; height: 27px; margin: auto;">
-                    <a href="{{ path('app_admin_agent_planning') }}">
+                    <a href="#">
                         <i style="font-size: 24px; color: #fff" class="fa-solid fa-user-group"></i>
                     </a>
                 </div>
@@ -48,34 +48,34 @@
                         <li>
                             <div class="link" style="border-left: 7px solid #0D6EFD"><i class="fa-sharp fa-solid fa-house-turret"></i>POINTAGE CENTRE DE TRI<i class="fa fa-chevron-down"></i></div>
                             <ul class="submenu">
-                                <li><a href="{{ path('app_admin_centre_tri_deee') }}">DEEE</a></li>
-                                <li><a href="{{ path('app_admin_centre_tri_pjm') }}">PJM</a></li>
-                                <li><a href="{{ path('app_admin_centre_tri_collecte') }}">COLLECTE EN DÉCHÈTERIE ET VALORISATION </a></li>
-                                <li><a href="{{ path('app_admin_centre_tri_entretien') }}">ENTRETIEN DES ESPACES VERTS / MAINTENANCE</a></li>
-                                <li><a href="{{ path('app_admin_centre_tri_menage') }}">MÉNAGE DES LOCAUX / BALLAUF / VALOR P</a></li>
+                                <li><a href="#">DEEE</a></li>
+                                <li><a href="#">PJM</a></li>
+                                <li><a href="#">COLLECTE EN DÉCHÈTERIE ET VALORISATION </a></li>
+                                <li><a href="#">ENTRETIEN DES ESPACES VERTS / MAINTENANCE</a></li>
+                                <li><a href="#">MÉNAGE DES LOCAUX / BALLAUF / VALOR P</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ path('app_admin_centre_depot') }}" style="text-decoration: none;">
+                            <a href="#" style="text-decoration: none;">
                                 <div class="link" style="border-left: 7px solid #DC3545"><i class="fa-solid fa-trash-xmark"></i>POINTAGE DÉPOTS SAUVAGES</div>
                             </a>
                         </li>
                         <li>
                             <div class="link" style="border-left: 7px solid #FFC107"><i class="fa-solid fa-recycle"></i>PLANNING DES DÉCHÈTERIES DU 25 FÉVRIER AU 03 MARS 2019<i class="fa fa-chevron-down"></i></div>
                             <ul class="submenu">
-                                <li><a href="{{ path('app_admin_centre_dechetterie_closeaux') }}">DÉCHETÈRIE CLOSEAUX</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_extension') }}">DÉCHETÈRIE EXTENSION</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_vaucouleurs') }}">DÉCHETÈRIE VAUCOULEURS</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_limay') }}">DÉCHETÈRIE LIMAY</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_mureaux') }}">DÉCHETÈRIE LES MUREAUX</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_aubergenville') }}">DÉCHETÈRIE d'AUBERGENVILLE</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_orgeval') }}">DÉCHETÈRIE d'ORGEVAL</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_epone') }}">DÉCHETÈRIE ÉPÔNE</a></li>
-                                <li><a href="{{ path('app_admin_centre_dechetterie_gargenville')}}">DÉCHETÈRIE GARGENVILLE</a></li>
+                                <li><a href="#">DÉCHETÈRIE CLOSEAUX</a></li>
+                                <li><a href="#">DÉCHETÈRIE EXTENSION</a></li>
+                                <li><a href="#">DÉCHETÈRIE VAUCOULEURS</a></li>
+                                <li><a href="#">DÉCHETÈRIE LIMAY</a></li>
+                                <li><a href="#">DÉCHETÈRIE LES MUREAUX</a></li>
+                                <li><a href="#">DÉCHETÈRIE d'AUBERGENVILLE</a></li>
+                                <li><a href="#">DÉCHETÈRIE d'ORGEVAL</a></li>
+                                <li><a href="#">DÉCHETÈRIE ÉPÔNE</a></li>
+                                <li><a href="#">DÉCHETÈRIE GARGENVILLE</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ path('app_admin_centre_incendie') }}" style="text-decoration: none;">
+                            <a href="#" style="text-decoration: none;">
                                 <div class="link" style="border-left: 7px solid #198754"><i class="fa-solid fa-fire-extinguisher"></i>POINTAGE RÉSEAU INCENDIE</div>
                             </a>
                         </li>
@@ -86,8 +86,23 @@
     </div>
 </div>
 
+<br>
 <a href="{{ path('app_user_index') }}"><i class="fa-solid fa-user-gear"></i>Gestion des agents</a>
 <a href="{{ path('app_planning_index') }}">Gestion des plannings</a>
 
+<br>
+Liste des urls à ranger plutard<br>
+<a href="{{ path('app_admin_accueil') }}">Accueil administrateur</a><br>
+<a href="{{ path('app_planning_index') }}">Gestion des plannings</a><br>
+<a href="{{ path('app_planning_agent') }}">Planning des agents</a><br>
+<a href="{{ path('app_user_index') }}">Gestion des agents</a><br>
+<a href="{{ path('app_centre_index') }}">Centres (pas necessaire)</a><br>
+<a href="{{ path('app_centre_tri_index') }}">Centre de tri</a><br>
+<a href="{{ path('app_dechetterie_index') }}">Déchetterie</a><br>
+<a href="{{ path('app_depot_sauvage_index') }}">Dépôt sauvage</a><br>
+<a href="{{ path('app_reseau_incendie_index') }}">Réseau incendie</a><br>
+<a href="{{ path('app_statut_index') }}">Poste agent</a><br>
+<a href="{{ path('app_statut_agent_index') }}">Période d'affectation</a><br>
+<a href="{{ path('app_admin_accueil') }}">Ac</a><br>
 
 {% endblock %}

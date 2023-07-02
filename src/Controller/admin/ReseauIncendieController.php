@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\ReseauIncendie;
 use App\Form\ReseauIncendieType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/reseau/incendie')]
+#[Route('/admin/reseau/incendie')]
 class ReseauIncendieController extends AbstractController
 {
     #[Route('/', name: 'app_reseau_incendie_index', methods: ['GET'])]

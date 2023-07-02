@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Centre;
 use App\Form\CentreType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/centre')]
+#[Route('/admin/centre')]
 class CentreController extends AbstractController
 {
     #[Route('/', name: 'app_centre_index', methods: ['GET'])]

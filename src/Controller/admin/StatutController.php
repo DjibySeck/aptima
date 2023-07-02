@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Statut;
 use App\Form\StatutType;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/statut')]
+#[Route('/admin/statut')]
 class StatutController extends AbstractController
 {
     #[Route('/', name: 'app_statut_index', methods: ['GET'])]
