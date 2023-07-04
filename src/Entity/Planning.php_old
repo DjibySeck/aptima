@@ -33,8 +33,7 @@ class Planning
     #[ORM\JoinColumn(nullable: false)]
     private ?Centre $centre = null;
 
-    //#[ORM\ManyToOne]
-    #[ORM\ManyToOne(inversedBy: 'plannings')]
+    #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 

@@ -20,6 +20,25 @@
             Mot de passe : {{ app.user.password }}
     </div>
 
+
+
+{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.user }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.statut }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.DateDebut ? StatutAgent.DateDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.DateFin ? StatutAgent.DateFin|date('Y-m-d') : ''  }} {% endfor %} <br>
+
+{% for Planning in app.user.Plannings %}{{ Planning.User }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.Centre }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.DatePlanning ? Planning.DatePlanning|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.PlanHeureAmDebut ? Planning.PlanHeureAmDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.PlanHeureAmFin ? Planning.PlanHeureAmFin|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.PlanHeurePmDebut ? Planning.PlanHeurePmDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}{{ Planning.PlanHeurePmFin ? Planning.PlanHeurePmFin|date('Y-m-d') : ''  }} {% endfor %} <br>
+
+
+
+  
+
     Formulaire pour contacter l'administrateur
 
 </div>
