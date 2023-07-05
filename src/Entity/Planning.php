@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use App\Entity\StatutAgent;
+use App\Entity\Statut;
+
 use App\Repository\PlanningRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
