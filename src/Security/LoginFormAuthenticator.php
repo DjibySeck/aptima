@@ -21,8 +21,20 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 
     public const LOGIN_ROUTE = 'app_login';
 
-    public function __construct(private UrlGeneratorInterface $urlGenerator)
+    //1
+    private UrlGeneratorInterface $urlGenerator;
+    //2
+    private Security $security;
+
+    //public function __construct(private UrlGeneratorInterface $urlGenerator)
+
+    //3
+    public function __construct(UrlGeneratorInterface $urlGenerator, Security $security)
     {
+        //4
+        $this->urlGenerator = $urlGenerator;
+        //5
+        $this->security = $security;
     }
 
     public function authenticate(Request $request): Passport
@@ -45,8 +57,12 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
         if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
             return new RedirectResponse($targetPath);
         }
+        //6
+        if ($this->security->isGranted("ROLE_ADMIN")) {
+            return new RedirectResponse($this->urlGenerator->generate('app_admin_accueil'));
+        }
+        //fin6
 
-        // For example:
         return new RedirectResponse($this->urlGenerator->generate('app_profil'));
         //throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
