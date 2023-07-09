@@ -18,6 +18,11 @@
                 <th>Centre</th>
                 <th>Agent</th>
 
+                <th>Etat</th>
+                <th>debut etat</th>
+                <th>fin etat</th>
+
+
 
 
                 <th>actions</th>
@@ -33,9 +38,12 @@
                 <td>{{ planning.planHeurePmDebut ? planning.planHeurePmDebut|date('H:i:s') : '' }}</td>
                 <td>{{ planning.planHeurePmFin ? planning.planHeurePmFin|date('H:i:s') : '' }}</td>
 
-                <td>{{ planning.centre }}</td>
-                <td>{{ planning.user }}</td>
+                <td>{{ planning.centre.nomCentre }}</td>
+                <td>{{ planning.user.prenom ~" "~ planning.user.nom }}</td>
 
+                <td>valeur</td>
+                <td>valeur</td>
+                <td>valeur</td>
 
 
                 <td>
