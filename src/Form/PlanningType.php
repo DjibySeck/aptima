@@ -33,12 +33,6 @@ class PlanningType extends AbstractType
                 'class' => User::class,       
                 'choice_label' => 'prenom'
             ])           
-            /*
-            ->add('statut_agent', EntityType::class, [
-                'class' => StatutAgent::class,       
-                'choice_label' => 'date_debut'
-            ])
-            */
         ;
     }
 

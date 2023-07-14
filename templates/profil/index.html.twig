@@ -22,18 +22,18 @@
 
 
 
-{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.user }} {% endfor %} <br>
-{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.statut }} {% endfor %} <br>
-{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.DateDebut ? StatutAgent.DateDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
-{% for StatutAgent in app.user.StatutAgents %}{{ StatutAgent.DateFin ? StatutAgent.DateFin|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}Nom et prénom de l'agent : {{ StatutAgent.user.nom ~ " " ~ StatutAgent.user.prenom }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}Statut de l'agent : {{ StatutAgent.statut }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}Date de début de statut : {{ StatutAgent.DateDebut ? StatutAgent.DateDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for StatutAgent in app.user.StatutAgents %}Date de fin de statut : {{ StatutAgent.DateFin ? StatutAgent.DateFin|date('Y-m-d') : ''  }} {% endfor %} <br>
 
-{% for Planning in app.user.Plannings %}{{ Planning.User }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.Centre }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.DatePlanning ? Planning.DatePlanning|date('Y-m-d') : ''  }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.PlanHeureAmDebut ? Planning.PlanHeureAmDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.PlanHeureAmFin ? Planning.PlanHeureAmFin|date('Y-m-d') : ''  }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.PlanHeurePmDebut ? Planning.PlanHeurePmDebut|date('Y-m-d') : ''  }} {% endfor %} <br>
-{% for Planning in app.user.Plannings %}{{ Planning.PlanHeurePmFin ? Planning.PlanHeurePmFin|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Nom et prénom de l'agent : {{ Planning.User.nom ~ " " ~ Planning.User.prenom }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Centre : {{ Planning.Centre.NomCentre }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Date du planning : {{ Planning.DatePlanning ? Planning.DatePlanning|date('Y-m-d') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Matin, Heure début planning : {{ Planning.PlanHeureAmDebut ? Planning.PlanHeureAmDebut|date('H:i:s') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Matin, Heure fin planning : {{ Planning.PlanHeureAmFin ? Planning.PlanHeureAmFin|date('H:i:s') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Après-midi, Heure début planning : {{ Planning.PlanHeurePmDebut ? Planning.PlanHeurePmDebut|date('H:i:s') : ''  }} {% endfor %} <br>
+{% for Planning in app.user.Plannings %}Après-midi, Heure fin planning : {{ Planning.PlanHeurePmFin ? Planning.PlanHeurePmFin|date('H:i:s') : ''  }} {% endfor %} <br>
 
 
 
